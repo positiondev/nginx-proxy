@@ -1,5 +1,5 @@
 deployment:
-  nginx-proxy:
+  nginxproxy:
     branch: master
     commands:
       - docker login  -e dbp@positiondev.com -u $QUAY_USERNAME -p $QUAY_PASSWORD quay.io
