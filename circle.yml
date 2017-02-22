@@ -1,0 +1,7 @@
+deployment:
+  nginx-proxy:
+    branch: master
+    commands:
+      - docker login  -e dbp@positiondev.com -u $QUAY_USERNAME -p $QUAY_PASSWORD quay.io
+      - docker build -t quay.io/positiondev/nginx-proxy:$(git rev-parse HEAD) .
+      - docker push quay.io/positiondev/nginx-proxy:$(git rev-parse HEAD)
