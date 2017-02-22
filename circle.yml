@@ -1,3 +1,9 @@
+machine:
+  services:
+    - docker
+  environment:
+    LANG: C.UTF-8
+
 deployment:
   nginxproxy:
     branch: master
